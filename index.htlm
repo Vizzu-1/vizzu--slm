@@ -1,0 +1,582 @@
+bash
+
+cat > /mnt/user-data/outputs/vizzu-slm.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIZZU SLM — Achadinhos com Entrega Rápida em SLM</title>
+<meta name="description" content="Gadgets modernos e utilidades virais com entrega rápida em São Lourenço da Mata - PE. Compre pelo WhatsApp!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0A0A;--s1:#141414;--s2:#1C1C1C;--purple:#8B2CF5;--pl:#A855F7;--orange:#FF6B00;--ol:#FF8C38;--green:#22C55E;--pg:rgba(139,44,245,.22);--og:rgba(255,107,0,.18);--text:#F2F2F2;--mu:#777;--mu2:#444;--bd:rgba(255,255,255,.07);--fd:'Cabinet Grotesk',sans-serif;--fb:'Instrument Sans',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.5}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(10,10,10,.9);backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--bd)}
+.nav-logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.logo-mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--purple),var(--orange));display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:900;font-size:13px;color:#fff;box-shadow:0 0 18px var(--pg);flex-shrink:0}
+.logo-text{font-family:var(--fd);font-weight:800;font-size:15px;letter-spacing:.5px}
+.nav-right{display:flex;align-items:center;gap:8px}
+.nav-wa{display:flex;align-items:center;gap:6px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25);color:#4ade80;border-radius:100px;padding:7px 13px;font-size:12px;font-weight:600;text-decoration:none;transition:all .2s}
+.nav-wa:hover{background:rgba(37,211,102,.2)}
+.nav-cta{background:var(--purple);color:#fff;border:none;border-radius:100px;padding:8px 18px;font-family:var(--fb);font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;box-shadow:0 0 20px var(--pg);transition:all .2s}
+.nav-cta:hover{background:var(--pl);transform:translateY(-1px)}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 24px 80px;overflow:hidden;text-align:center}
+.hg1{position:absolute;width:600px;height:400px;background:radial-gradient(ellipse,rgba(139,44,245,.18) 0%,transparent 70%);top:-80px;left:50%;transform:translateX(-50%);pointer-events:none}
+.hg2{position:absolute;width:320px;height:320px;background:radial-gradient(circle,rgba(255,107,0,.13) 0%,transparent 70%);bottom:60px;right:-40px;pointer-events:none}
+.hg3{position:absolute;width:200px;height:200px;background:radial-gradient(circle,rgba(255,107,0,.09) 0%,transparent 70%);bottom:100px;left:-30px;pointer-events:none}
+.float-icons{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.fi{position:absolute;font-size:20px;opacity:.09;animation:floatA linear infinite}
+.fi1{left:7%;top:28%;animation-duration:20s}.fi2{left:88%;top:18%;animation-duration:25s;animation-delay:-6s}.fi3{left:12%;top:68%;animation-duration:17s;animation-delay:-3s}.fi4{left:80%;top:72%;animation-duration:22s;animation-delay:-9s}.fi5{left:48%;top:12%;animation-duration:28s;animation-delay:-2s}.fi6{left:72%;top:48%;animation-duration:18s;animation-delay:-12s}
+@keyframes floatA{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-28px) rotate(8deg)}100%{transform:translateY(0) rotate(0deg)}}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(139,44,245,.1);border:1px solid rgba(139,44,245,.28);border-radius:100px;padding:7px 18px;font-size:12px;font-weight:500;color:#c084fc;letter-spacing:.3px;margin-bottom:28px;animation:fadeUp .7s ease both}
+.bdot{width:6px;height:6px;border-radius:50%;background:var(--pl);box-shadow:0 0 8px var(--pl);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-logo{width:82px;height:82px;border-radius:22px;position:relative;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;animation:fadeUp .7s .08s ease both;background:var(--s2)}
+.hero-logo::before{content:'';position:absolute;inset:-2px;border-radius:24px;background:linear-gradient(135deg,var(--purple),var(--orange));z-index:-1;box-shadow:0 0 40px var(--pg),0 0 20px var(--og)}
+.hli{font-family:var(--fd);font-weight:900;font-size:20px;background:linear-gradient(135deg,#c084fc,var(--ol));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+h1{font-family:var(--fd);font-weight:900;font-size:clamp(28px,8.5vw,56px);line-height:1.08;letter-spacing:-1.5px;max-width:680px;margin:0 auto 18px;animation:fadeUp .7s .15s ease both}
+h1 em{font-style:normal;background:linear-gradient(95deg,#c084fc 0%,var(--ol) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:clamp(15px,3.8vw,17px);color:var(--mu);max-width:380px;line-height:1.65;margin:0 auto 36px;animation:fadeUp .7s .22s ease both}
+.hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;animation:fadeUp .7s .3s ease both}
+.btn-p{background:linear-gradient(135deg,var(--purple),#6D00CC);color:#fff;border:none;border-radius:100px;padding:15px 30px;font-size:15px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 6px 32px var(--pg);transition:all .25s}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(139,44,245,.45)}
+.btn-w{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.3);color:#4ade80;border-radius:100px;padding:14px 26px;font-size:15px;font-weight:500;text-decoration:none;transition:all .25s}
+.btn-w:hover{background:rgba(37,211,102,.18);transform:translateY(-1px)}
+.scroll-hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;animation:fadeUp 1s .9s ease both}
+.scroll-line{width:1px;height:36px;background:linear-gradient(to bottom,transparent,var(--mu2));animation:sLine 2s infinite}
+@keyframes sLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.scroll-lbl{font-size:9px;color:var(--mu2);letter-spacing:2.5px;text-transform:uppercase}
+.trust{padding:0 20px 50px;position:relative;z-index:1}
+.trust-inner{max-width:500px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tc{background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:18px 14px;display:flex;align-items:center;gap:11px;transition:all .28s}
+.tc:hover{border-color:rgba(139,44,245,.28);transform:translateY(-2px)}
+.tc-icon{font-size:20px;flex-shrink:0}
+.tc-text{font-size:12px;font-weight:500;color:#bbb;line-height:1.35}
+.tc-text strong{display:block;color:var(--text);font-size:13px;margin-bottom:1px}
+.products{padding:20px 20px 60px;position:relative;z-index:1}
+.sh{text-align:center;margin-bottom:30px}
+.stag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--pl);background:rgba(139,44,245,.1);border:1px solid rgba(139,44,245,.2);border-radius:100px;padding:4px 14px;margin-bottom:12px}
+.stitle{font-family:var(--fd);font-weight:800;font-size:clamp(22px,6vw,36px);letter-spacing:-.8px}
+.pgrid{display:grid;grid-template-columns:1fr;gap:14px;max-width:520px;margin:0 auto}
+.pc{background:var(--s1);border:1px solid var(--bd);border-radius:22px;overflow:hidden;cursor:pointer;transition:all .32s cubic-bezier(.25,.8,.25,1);position:relative}
+.pc:hover{border-color:rgba(139,44,245,.32);transform:translateY(-4px);box-shadow:0 22px 55px rgba(0,0,0,.55),0 0 30px rgba(139,44,245,.1)}
+.pimg{width:100%;aspect-ratio:16/10;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pimg svg{position:absolute;inset:0;width:100%;height:100%}
+.pbadge{position:absolute;top:12px;left:12px;z-index:3;background:rgba(0,0,0,.65);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);color:#fff;border-radius:100px;padding:4px 12px;font-size:10px;font-weight:600;letter-spacing:.2px}
+.pbadge.hot{background:rgba(239,68,68,.8);border-color:rgba(239,68,68,.4)}
+.pbadge.new{background:rgba(139,44,245,.8);border-color:rgba(139,44,245,.4)}
+.pbadge.best{background:rgba(234,179,8,.8);border-color:rgba(234,179,8,.4)}
+.pbadge.eco{background:rgba(34,197,94,.8);border-color:rgba(34,197,94,.4)}
+.ptag{position:absolute;top:12px;right:12px;z-index:3;background:rgba(34,197,94,.18);border:1px solid rgba(34,197,94,.4);color:#4ade80;border-radius:100px;padding:3px 10px;font-size:10px;font-weight:700}
+.pinfo{padding:16px 18px 18px}
+.pname{font-family:var(--fd);font-weight:800;font-size:17px;letter-spacing:-.3px;margin-bottom:4px}
+.pdesc{font-size:12px;color:var(--mu);line-height:1.4;margin-bottom:14px}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pprices{display:flex;flex-direction:column}
+.pold{font-size:11px;color:var(--mu2);text-decoration:line-through}
+.pnew{font-family:var(--fd);font-weight:800;font-size:22px;letter-spacing:-.5px}
+.pnew span{font-size:14px;font-weight:500}
+.psave{font-size:11px;color:var(--green);font-weight:600;margin-top:1px}
+.pbuy{display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,#25D366,#1aab53);color:#fff;border:none;border-radius:100px;padding:11px 18px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;box-shadow:0 4px 18px rgba(37,211,102,.3);transition:all .22s;text-decoration:none}
+.pbuy:hover{transform:scale(1.04);box-shadow:0 6px 24px rgba(37,211,102,.45)}
+.pbanner{margin:0 20px 50px;max-width:480px;margin-left:auto;margin-right:auto;background:linear-gradient(135deg,rgba(139,44,245,.14),rgba(255,107,0,.09));border:1px solid rgba(139,44,245,.28);border-radius:18px;padding:22px 20px;display:flex;align-items:center;gap:14px;position:relative;z-index:1;overflow:hidden}
+.pbanner::before{content:'';position:absolute;top:-40px;right:-40px;width:150px;height:150px;background:radial-gradient(circle,rgba(139,44,245,.18),transparent 70%)}
+.pb-icon{font-size:34px;flex-shrink:0}
+.pb-text h3{font-family:var(--fd);font-weight:800;font-size:15px;margin-bottom:3px}
+.pb-text p{font-size:12px;color:var(--mu);line-height:1.5}
+.pb-text strong{color:#c084fc}
+.stats{padding:0 20px 50px;position:relative;z-index:1}
+.stats-inner{max-width:500px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sc{background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:18px 12px;text-align:center}
+.sc-num{font-family:var(--fd);font-weight:900;font-size:24px;letter-spacing:-1px;background:linear-gradient(135deg,#c084fc,var(--ol));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sc-lbl{font-size:11px;color:var(--mu);margin-top:3px;line-height:1.3}
+.community{padding:10px 20px 60px;position:relative;z-index:1}
+.comm-card{max-width:500px;margin:0 auto;background:var(--s1);border:1px solid var(--bd);border-radius:22px;padding:36px 22px;text-align:center;overflow:hidden;position:relative}
+.comm-card::before{content:'';position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:240px;height:180px;background:radial-gradient(ellipse,rgba(139,44,245,.14),transparent 70%)}
+.comm-stars{color:#FBBF24;font-size:17px;margin-bottom:12px;letter-spacing:2px}
+.comm-title{font-family:var(--fd);font-weight:800;font-size:20px;letter-spacing:-.5px;margin-bottom:11px;line-height:1.25}
+.comm-text{color:#999;font-size:14px;line-height:1.7;max-width:320px;margin:0 auto 22px}
+.comm-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border:none;border-radius:100px;padding:13px 26px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .25s;box-shadow:0 4px 22px rgba(37,211,102,.25)}
+.comm-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,.4)}
+footer{background:var(--s1);border-top:1px solid var(--bd);padding:34px 20px 26px;text-align:center;position:relative;z-index:1}
+.flogo{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:18px}
+.fmark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--purple),var(--orange));display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:900;font-size:11px;color:#fff}
+.fbrand{font-family:var(--fd);font-weight:800;font-size:14px;letter-spacing:.5px}
+.socials{display:flex;justify-content:center;gap:10px;margin-bottom:18px}
+.sb{width:42px;height:42px;border-radius:50%;background:var(--s2);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all .2s}
+.sb:hover{border-color:rgba(139,44,245,.4);transform:translateY(-2px)}
+.finfo{font-size:12px;color:var(--mu);line-height:1.9}
+.fcopy{font-size:11px;color:var(--mu2);margin-top:8px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:360px){h1{font-size:26px}.trust-inner{grid-template-columns:1fr}.stats-inner{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:520px){.pgrid{grid-template-columns:repeat(2,1fr)}.pc.feat{grid-column:1/-1}.pc.feat .pimg{aspect-ratio:21/9}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="logo-mark">VZ</div>
+    <span class="logo-text">VIZZU SLM</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-wa" href="https://wa.me/5581996130184" target="_blank" rel="noopener">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a class="nav-cta" href="#produtos">Ver produtos</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hg1"></div><div class="hg2"></div><div class="hg3"></div>
+  <div class="float-icons" aria-hidden="true">
+    <span class="fi fi1">📦</span><span class="fi fi2">⚡</span><span class="fi fi3">🚚</span>
+    <span class="fi fi4">✨</span><span class="fi fi5">📍</span><span class="fi fi6">💜</span>
+  </div>
+  <div class="hero-badge"><span class="bdot"></span>Entrega rápida em São Lourenço da Mata</div>
+  <div class="hero-logo" aria-hidden="true"><span class="hli">VZ</span></div>
+  <h1>Os <em>achadinhos da internet</em>,<br>agora mais perto de você.</h1>
+  <p class="hero-sub">Gadgets virais, utilidades modernas e os produtos do momento — entregues rapidinho em SLM.</p>
+  <div class="hero-actions">
+    <a class="btn-p" href="#produtos">Ver produtos →</a>
+    <a class="btn-w" href="https://wa.me/5581996130184" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Pedir agora
+    </a>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span class="scroll-lbl">scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<section class="trust reveal">
+  <div class="trust-inner">
+    <div class="tc"><span class="tc-icon">🚚</span><div class="tc-text"><strong>Entrega rápida</strong>Só em São Lourenço da Mata</div></div>
+    <div class="tc"><span class="tc-icon">💬</span><div class="tc-text"><strong>Atendimento humano</strong>Direto pelo WhatsApp</div></div>
+    <div class="tc"><span class="tc-icon">📦</span><div class="tc-text"><strong>Pronta entrega</strong>Produto em estoque local</div></div>
+    <div class="tc"><span class="tc-icon">🛡️</span><div class="tc-text"><strong>Compra segura</strong>Só paga ao receber</div></div>
+  </div>
+</section>
+
+<section class="products" id="produtos">
+  <div class="sh reveal">
+    <span class="stag">🔥 Mais pedidos em SLM</span>
+    <h2 class="stitle">Produtos em destaque</h2>
+  </div>
+  <div class="pgrid">
+
+    <!-- 1: FONE BLUETOOTH TWS -->
+    <div class="pc feat reveal">
+      <div class="pimg">
+        <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="bg1" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#1e0f35"/><stop offset="100%" stop-color="#0a0812"/></radialGradient>
+            <radialGradient id="gl1" cx="50%" cy="40%" r="55%"><stop offset="0%" stop-color="#8B2CF5" stop-opacity="0.5"/><stop offset="100%" stop-color="#8B2CF5" stop-opacity="0"/></radialGradient>
+            <linearGradient id="earbud" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a1a40"/><stop offset="100%" stop-color="#1a0e28"/></linearGradient>
+            <linearGradient id="caseGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#221540"/><stop offset="100%" stop-color="#110a20"/></linearGradient>
+            <filter id="glow1"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect width="600" height="240" fill="url(#bg1)"/>
+          <ellipse cx="300" cy="110" rx="200" ry="130" fill="url(#gl1)"/>
+          <!-- Pulse rings -->
+          <circle cx="300" cy="110" r="90" fill="none" stroke="#8B2CF5" stroke-width="0.8" stroke-opacity="0.2"/>
+          <circle cx="300" cy="110" r="120" fill="none" stroke="#8B2CF5" stroke-width="0.5" stroke-opacity="0.12"/>
+          <circle cx="300" cy="110" r="150" fill="none" stroke="#8B2CF5" stroke-width="0.3" stroke-opacity="0.07"/>
+          <!-- Case body -->
+          <rect x="228" y="60" width="144" height="108" rx="28" fill="url(#caseGrad)" stroke="#8B2CF5" stroke-width="1.8"/>
+          <!-- Case inner -->
+          <rect x="236" y="68" width="128" height="92" rx="20" fill="#0e0818"/>
+          <!-- Case hinge top -->
+          <rect x="255" y="56" width="90" height="10" rx="5" fill="#1a1030" stroke="#8B2CF5" stroke-width="1" stroke-opacity="0.5"/>
+          <!-- Left earbud slot -->
+          <ellipse cx="261" cy="114" rx="18" ry="26" fill="#140c22" stroke="#6B21D0" stroke-width="1.2"/>
+          <ellipse cx="261" cy="120" rx="11" ry="15" fill="#0e0818" stroke="#8B2CF5" stroke-width="0.8" stroke-opacity="0.6"/>
+          <circle cx="261" cy="120" r="5" fill="#8B2CF5" opacity="0.7" filter="url(#glow1)"/>
+          <circle cx="261" cy="120" r="2" fill="#c084fc"/>
+          <!-- Right earbud slot -->
+          <ellipse cx="339" cy="114" rx="18" ry="26" fill="#140c22" stroke="#6B21D0" stroke-width="1.2"/>
+          <ellipse cx="339" cy="120" rx="11" ry="15" fill="#0e0818" stroke="#8B2CF5" stroke-width="0.8" stroke-opacity="0.6"/>
+          <circle cx="339" cy="120" r="5" fill="#8B2CF5" opacity="0.7" filter="url(#glow1)"/>
+          <circle cx="339" cy="120" r="2" fill="#c084fc"/>
+          <!-- LED dots bottom -->
+          <circle cx="285" cy="154" r="3.5" fill="#8B2CF5" opacity="0.9" filter="url(#glow1)"/>
+          <circle cx="300" cy="154" r="3.5" fill="#3B3B3B"/>
+          <circle cx="315" cy="154" r="3.5" fill="#3B3B3B"/>
+          <!-- USB-C port -->
+          <rect x="285" y="163" width="30" height="6" rx="3" fill="#0a0612" stroke="#8B2CF5" stroke-width="0.8" stroke-opacity="0.5"/>
+          <!-- Left earbud floating out -->
+          <g transform="translate(130,30) rotate(-15)">
+            <ellipse cx="30" cy="55" rx="24" ry="36" fill="url(#earbud)" stroke="#8B2CF5" stroke-width="1.5"/>
+            <ellipse cx="30" cy="66" rx="14" ry="20" fill="#0e0818" stroke="#6B21D0" stroke-width="1"/>
+            <circle cx="30" cy="66" r="7" fill="#8B2CF5" opacity="0.8" filter="url(#glow1)"/>
+            <circle cx="30" cy="66" r="3" fill="#c084fc"/>
+            <!-- stem -->
+            <rect x="24" y="89" width="12" height="22" rx="6" fill="#1a1030" stroke="#8B2CF5" stroke-width="1"/>
+            <ellipse cx="30" cy="111" rx="7" ry="4" fill="#140c22" stroke="#8B2CF5" stroke-width="0.8"/>
+          </g>
+          <!-- Right earbud floating out -->
+          <g transform="translate(410,25) rotate(18)">
+            <ellipse cx="30" cy="55" rx="24" ry="36" fill="url(#earbud)" stroke="#8B2CF5" stroke-width="1.5"/>
+            <ellipse cx="30" cy="66" rx="14" ry="20" fill="#0e0818" stroke="#6B21D0" stroke-width="1"/>
+            <circle cx="30" cy="66" r="7" fill="#8B2CF5" opacity="0.8" filter="url(#glow1)"/>
+            <circle cx="30" cy="66" r="3" fill="#c084fc"/>
+            <rect x="24" y="89" width="12" height="22" rx="6" fill="#1a1030" stroke="#8B2CF5" stroke-width="1"/>
+            <ellipse cx="30" cy="111" rx="7" ry="4" fill="#140c22" stroke="#8B2CF5" stroke-width="0.8"/>
+          </g>
+          <!-- Label -->
+          <text x="300" y="210" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8B2CF5" opacity="0.5" font-weight="600" letter-spacing="2">TWS · BLUETOOTH 5.3 · 30H BATERIA</text>
+        </svg>
+        <span class="pbadge hot">🔥 #1 mais pedido</span>
+        <span class="ptag">-40% OFF</span>
+      </div>
+      <div class="pinfo">
+        <p class="pname">Fone Bluetooth TWS Premium</p>
+        <p class="pdesc">Sem fio · Cancelamento de ruído · Até 30h com o case · Conexão instantânea · IPX5 resistente ao suor</p>
+        <div class="prow">
+          <div class="pprices">
+            <span class="pold">R$ 139,90</span>
+            <span class="pnew"><span>R$</span> 84,90</span>
+            <span class="psave">💚 Você economiza R$ 55,00</span>
+          </div>
+          <a class="pbuy" href="https://wa.me/5581996130184?text=Oi!%20Quero%20o%20Fone%20Bluetooth%20TWS%20por%20R%24%2084%2C90%20%F0%9F%8E%A7" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pedir
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: SMARTWATCH -->
+    <div class="pc reveal">
+      <div class="pimg">
+        <svg viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="bg2" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#1a0d0d"/><stop offset="100%" stop-color="#0a0808"/></radialGradient>
+            <radialGradient id="gl2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#EF4444" stop-opacity="0.35"/><stop offset="100%" stop-color="#EF4444" stop-opacity="0"/></radialGradient>
+            <linearGradient id="watchBody" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a1515"/><stop offset="100%" stop-color="#1a0e0e"/></linearGradient>
+            <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0d0d18"/><stop offset="100%" stop-color="#050510"/></linearGradient>
+            <filter id="glow2"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect width="300" height="190" fill="url(#bg2)"/>
+          <ellipse cx="150" cy="95" rx="120" ry="85" fill="url(#gl2)"/>
+          <!-- Watch band top -->
+          <rect x="118" y="8" width="34" height="38" rx="8" fill="#1a0e0e" stroke="#EF4444" stroke-width="1" stroke-opacity="0.5"/>
+          <line x1="126" y1="18" x2="144" y2="18" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.3"/>
+          <line x1="126" y1="24" x2="144" y2="24" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.3"/>
+          <line x1="126" y1="30" x2="144" y2="30" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.3"/>
+          <!-- Watch band bottom -->
+          <rect x="118" y="144" width="34" height="38" rx="8" fill="#1a0e0e" stroke="#EF4444" stroke-width="1" stroke-opacity="0.5"/>
+          <line x1="126" y1="154" x2="144" y2="154" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.3"/>
+          <line x1="126" y1="160" x2="144" y2="160" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.3"/>
+          <line x1="126" y1="166" x2="144" y2="166" stroke="#EF4444" stroke-width="0.8" stroke-opacity="0.3"/>
+          <!-- Watch body -->
+          <rect x="95" y="42" width="110" height="106" rx="26" fill="url(#watchBody)" stroke="#EF4444" stroke-width="2"/>
+          <!-- Crown button -->
+          <rect x="203" y="68" width="8" height="18" rx="4" fill="#2a1515" stroke="#EF4444" stroke-width="1"/>
+          <rect x="203" y="88" width="8" height="10" rx="4" fill="#2a1515" stroke="#EF4444" stroke-width="1"/>
+          <!-- Screen -->
+          <rect x="103" y="50" width="94" height="90" rx="20" fill="url(#screenGrad)"/>
+          <!-- Screen content -->
+          <!-- Time -->
+          <text x="150" y="82" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#ffffff" font-weight="700" letter-spacing="-1">10:24</text>
+          <text x="150" y="94" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#EF4444" opacity="0.8">QUA, 28 MAI</text>
+          <!-- Heart rate -->
+          <text x="118" y="110" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#EF4444" opacity="0.7">♥ 72bpm</text>
+          <!-- Steps -->
+          <text x="182" y="110" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#fff" opacity="0.5">👟 8.2k</text>
+          <!-- Activity ring -->
+          <circle cx="150" cy="122" r="14" fill="none" stroke="#333" stroke-width="3"/>
+          <circle cx="150" cy="122" r="14" fill="none" stroke="#EF4444" stroke-width="3" stroke-dasharray="66 22" stroke-linecap="round" transform="rotate(-90 150 122)" filter="url(#glow2)"/>
+          <text x="150" y="126" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#fff" opacity="0.8">75%</text>
+          <!-- Screen reflection -->
+          <rect x="103" y="50" width="94" height="25" rx="20" fill="white" opacity="0.03"/>
+          <!-- Label -->
+          <text x="150" y="178" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#EF4444" opacity="0.4" letter-spacing="1.5">SMARTWATCH · GPS · IP68</text>
+        </svg>
+        <span class="pbadge hot">⌚ Top gadget 2025</span>
+        <span class="ptag">-40% OFF</span>
+      </div>
+      <div class="pinfo">
+        <p class="pname">Smartwatch Fit Pro</p>
+        <p class="pdesc">Monitor cardíaco · GPS · IP68 à prova d'água · Notificações · Até 7 dias de bateria</p>
+        <div class="prow">
+          <div class="pprices">
+            <span class="pold">R$ 199,90</span>
+            <span class="pnew"><span>R$</span> 119,90</span>
+            <span class="psave">💚 Economize R$ 80,00</span>
+          </div>
+          <a class="pbuy" href="https://wa.me/5581996130184?text=Oi!%20Quero%20o%20Smartwatch%20Fit%20Pro%20por%20R%24%20119%2C90%20%E2%8C%9A" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pedir
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: CARREGADOR TURBO 65W -->
+    <div class="pc reveal">
+      <div class="pimg">
+        <svg viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="bg3" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#1a1200"/><stop offset="100%" stop-color="#0d0900"/></radialGradient>
+            <radialGradient id="gl3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F59E0B" stop-opacity="0.4"/><stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/></radialGradient>
+            <linearGradient id="chargerBody" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#252010"/><stop offset="100%" stop-color="#151008"/></linearGradient>
+            <filter id="glow3"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect width="300" height="190" fill="url(#bg3)"/>
+          <ellipse cx="150" cy="95" rx="120" ry="85" fill="url(#gl3)"/>
+          <!-- Charger cube body -->
+          <rect x="85" y="35" width="90" height="90" rx="22" fill="url(#chargerBody)" stroke="#F59E0B" stroke-width="2"/>
+          <!-- Top face sheen -->
+          <rect x="85" y="35" width="90" height="30" rx="22" fill="white" opacity="0.03"/>
+          <!-- USB-C port 1 -->
+          <rect x="105" y="120" width="22" height="9" rx="4.5" fill="#0d0900" stroke="#F59E0B" stroke-width="1.2"/>
+          <!-- USB-C port 2 -->
+          <rect x="134" y="120" width="22" height="9" rx="4.5" fill="#0d0900" stroke="#F59E0B" stroke-width="1.2"/>
+          <!-- USB-A port -->
+          <rect x="108" y="133" width="44" height="10" rx="3" fill="#0d0900" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.6"/>
+          <!-- Logo area -->
+          <rect x="110" y="55" width="40" height="40" rx="10" fill="#1a1000" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.3"/>
+          <!-- Lightning bolt icon -->
+          <path d="M136 62 L126 78 L133 78 L124 95 L148 72 L140 72 Z" fill="#F59E0B" opacity="0.9" filter="url(#glow3)"/>
+          <!-- 65W label -->
+          <text x="150" y="112" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#F59E0B" opacity="0.7" font-weight="800">65W</text>
+          <!-- Cable -->
+          <path d="M150 145 Q150 162 130 168 Q110 172 105 182" stroke="#F59E0B" stroke-width="3" fill="none" stroke-opacity="0.5" stroke-linecap="round"/>
+          <!-- Cable end USB-C plug -->
+          <rect x="92" y="180" width="26" height="8" rx="4" fill="#1a1000" stroke="#F59E0B" stroke-width="1.2"/>
+          <!-- Charge glow effect on cable -->
+          <path d="M150 145 Q150 162 130 168 Q110 172 105 182" stroke="#F59E0B" stroke-width="1" fill="none" stroke-opacity="0.3" filter="url(#glow3)"/>
+          <!-- Sparks -->
+          <circle cx="200" cy="55" r="2" fill="#F59E0B" opacity="0.6" filter="url(#glow3)"/>
+          <circle cx="210" cy="70" r="1.5" fill="#F59E0B" opacity="0.4"/>
+          <circle cx="195" cy="80" r="1" fill="#F59E0B" opacity="0.3"/>
+          <text x="150" y="178" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#F59E0B" opacity="0.4" letter-spacing="1.5">65W · USB-C · CARGA ULTRA RÁPIDA</text>
+        </svg>
+        <span class="pbadge best">⚡ Carrega em minutos</span>
+        <span class="ptag">-30% OFF</span>
+      </div>
+      <div class="pinfo">
+        <p class="pname">Carregador Turbo 65W</p>
+        <p class="pdesc">Carga ultra rápida · 2x USB-C + 1x USB-A · Compatível com Samsung, iPhone e qualquer Android</p>
+        <div class="prow">
+          <div class="pprices">
+            <span class="pold">R$ 79,90</span>
+            <span class="pnew"><span>R$</span> 54,90</span>
+            <span class="psave">💚 Economize R$ 25,00</span>
+          </div>
+          <a class="pbuy" href="https://wa.me/5581996130184?text=Oi!%20Quero%20o%20Carregador%20Turbo%2065W%20por%20R%24%2054%2C90%20%E2%9A%A1" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pedir
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4: KIT CAPINHA + PELICULA -->
+    <div class="pc reveal">
+      <div class="pimg">
+        <svg viewBox="0 0 300 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="bg4" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#0d1520"/><stop offset="100%" stop-color="#060a12"/></radialGradient>
+            <radialGradient id="gl4" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#3B82F6" stop-opacity="0.35"/><stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
+            <linearGradient id="phoneBody" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a2035"/><stop offset="100%" stop-color="#0e1525"/></linearGradient>
+            <filter id="glow4"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect width="300" height="190" fill="url(#bg4)"/>
+          <ellipse cx="150" cy="95" rx="130" ry="85" fill="url(#gl4)"/>
+          <!-- Shadow phone behind -->
+          <rect x="162" y="22" width="68" height="130" rx="14" fill="#0e1525" stroke="#3B82F6" stroke-width="1" stroke-opacity="0.3" transform="rotate(12,196,87)"/>
+          <!-- Main phone body -->
+          <rect x="72" y="15" width="76" height="148" rx="18" fill="url(#phoneBody)" stroke="#3B82F6" stroke-width="2"/>
+          <!-- Case bumper outline -->
+          <rect x="67" y="10" width="86" height="158" rx="22" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
+          <!-- Case corner guards -->
+          <rect x="65" y="8" width="14" height="14" rx="7" fill="#3B82F6" opacity="0.4" filter="url(#glow4)"/>
+          <rect x="149" y="8" width="14" height="14" rx="7" fill="#3B82F6" opacity="0.4" filter="url(#glow4)"/>
+          <rect x="65" y="146" width="14" height="14" rx="7" fill="#3B82F6" opacity="0.4" filter="url(#glow4)"/>
+          <rect x="149" y="146" width="14" height="14" rx="7" fill="#3B82F6" opacity="0.4" filter="url(#glow4)"/>
+          <!-- Screen -->
+          <rect x="79" y="24" width="62" height="130" rx="10" fill="#060c18"/>
+          <!-- Screen wallpaper gradient -->
+          <rect x="79" y="24" width="62" height="130" rx="10" fill="url(#gl4)" opacity="0.3"/>
+          <!-- Notch/dynamic island -->
+          <rect x="96" y="26" width="28" height="7" rx="3.5" fill="#0a1020"/>
+          <!-- Screen icons -->
+          <circle cx="92" cy="60" r="7" fill="#1a2a4a" stroke="#3B82F6" stroke-width="0.8"/>
+          <circle cx="110" cy="60" r="7" fill="#1a2a4a" stroke="#3B82F6" stroke-width="0.8"/>
+          <circle cx="128" cy="60" r="7" fill="#1a2a4a" stroke="#3B82F6" stroke-width="0.8"/>
+          <circle cx="92" cy="78" r="7" fill="#1a2a4a" stroke="#3B82F6" stroke-width="0.8"/>
+          <circle cx="110" cy="78" r="7" fill="#1a4a2a" stroke="#22C55E" stroke-width="0.8"/>
+          <circle cx="128" cy="78" r="7" fill="#1a2a4a" stroke="#3B82F6" stroke-width="0.8"/>
+          <!-- Home bar -->
+          <rect x="96" y="146" width="28" height="3" rx="1.5" fill="#3B82F6" opacity="0.5"/>
+          <!-- Film glass indicator -->
+          <rect x="79" y="24" width="62" height="130" rx="10" fill="none" stroke="white" stroke-width="0.5" opacity="0.08"/>
+          <!-- Shield badge -->
+          <path d="M208 65 L220 71 L220 86 Q220 96 208 101 Q196 96 196 86 L196 71 Z" fill="none" stroke="#3B82F6" stroke-width="1.5" opacity="0.6"/>
+          <path d="M203 83 L207 87 L215 77" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.8" filter="url(#glow4)"/>
+          <text x="150" y="178" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#3B82F6" opacity="0.4" letter-spacing="1.5">ANTISHOCK · VIDRO 9H · SAMSUNG/IPHONE</text>
+        </svg>
+        <span class="pbadge new">📱 Todo mundo precisa</span>
+        <span class="ptag">-25% OFF</span>
+      </div>
+      <div class="pinfo">
+        <p class="pname">Kit Capinha + Película</p>
+        <p class="pdesc">Antishock · Vidro temperado 9H · Para Samsung e iPhone · Proteção total no dia a dia</p>
+        <div class="prow">
+          <div class="pprices">
+            <span class="pold">R$ 59,90</span>
+            <span class="pnew"><span>R$</span> 44,90</span>
+            <span class="psave">💚 Economize R$ 15,00</span>
+          </div>
+          <a class="pbuy" href="https://wa.me/5581996130184?text=Oi!%20Quero%20o%20Kit%20Capinha%20%2B%20Pel%C3%ADcula%20por%20R%24%2044%2C90%20%F0%9F%93%B1" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pedir
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5: POWER BANK -->
+    <div class="pc feat reveal">
+      <div class="pimg">
+        <svg viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="bg5" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#0a0e1a"/><stop offset="100%" stop-color="#050810"/></radialGradient>
+            <radialGradient id="gl5" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#22C55E" stop-opacity="0.3"/><stop offset="100%" stop-color="#22C55E" stop-opacity="0"/></radialGradient>
+            <linearGradient id="pbBody" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1a2a1a"/><stop offset="100%" stop-color="#0d180d"/></linearGradient>
+            <linearGradient id="pbFill" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#22C55E"/><stop offset="100%" stop-color="#16a34a"/></linearGradient>
+            <filter id="glow5"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <rect width="600" height="240" fill="url(#bg5)"/>
+          <ellipse cx="300" cy="120" rx="220" ry="110" fill="url(#gl5)"/>
+          <!-- Power bank main body -->
+          <rect x="110" y="60" width="320" height="120" rx="30" fill="url(#pbBody)" stroke="#22C55E" stroke-width="2"/>
+          <!-- Top sheen -->
+          <rect x="110" y="60" width="320" height="35" rx="30" fill="white" opacity="0.03"/>
+          <!-- Battery level track -->
+          <rect x="128" y="84" width="210" height="52" rx="14" fill="#080e08"/>
+          <!-- Battery fill 80% -->
+          <rect x="132" y="88" width="162" height="44" rx="10" fill="url(#pbFill)" filter="url(#glow5)"/>
+          <!-- Battery percentage -->
+          <text x="213" y="116" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#fff" font-weight="900" opacity="0.95">80%</text>
+          <!-- Battery tip -->
+          <rect x="338" y="96" width="10" height="28" rx="4" fill="#22C55E" opacity="0.5"/>
+          <!-- LED indicators -->
+          <circle cx="370" cy="90" r="7" fill="#22C55E" opacity="0.9" filter="url(#glow5)"/>
+          <circle cx="390" cy="90" r="7" fill="#22C55E" opacity="0.7"/>
+          <circle cx="410" cy="90" r="7" fill="#22C55E" opacity="0.4"/>
+          <circle cx="370" cy="110" r="7" fill="#22C55E" opacity="0.2"/>
+          <circle cx="390" cy="110" r="7" fill="#1a2a1a" stroke="#22C55E" stroke-width="1" stroke-opacity="0.3"/>
+          <!-- USB-C port left -->
+          <rect x="128" y="148" width="28" height="11" rx="5.5" fill="#080e08" stroke="#22C55E" stroke-width="1.2"/>
+          <!-- USB-A port -->
+          <rect x="165" y="148" width="32" height="11" rx="3" fill="#080e08" stroke="#22C55E" stroke-width="1" stroke-opacity="0.6"/>
+          <!-- USB-C port right -->
+          <rect x="205" y="148" width="28" height="11" rx="5.5" fill="#080e08" stroke="#22C55E" stroke-width="1.2"/>
+          <!-- Power button -->
+          <circle cx="415" cy="137" r="15" fill="#0d180d" stroke="#22C55E" stroke-width="1.5"/>
+          <path d="M415 126 L415 137" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" filter="url(#glow5)"/>
+          <path d="M408 130 Q403 137 408 144 Q415 148 422 144 Q427 137 422 130" stroke="#22C55E" stroke-width="2" fill="none" filter="url(#glow5)"/>
+          <!-- Capacity label -->
+          <text x="300" y="205" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#22C55E" opacity="0.45" font-weight="700" letter-spacing="2">20.000 mAh · 22W · CARREGA 5X SEU CELULAR</text>
+        </svg>
+        <span class="pbadge eco">🔋 Nunca fique sem bateria</span>
+        <span class="ptag">-30% OFF</span>
+      </div>
+      <div class="pinfo">
+        <p class="pname">Power Bank 20.000mAh</p>
+        <p class="pdesc">Carrega seu celular até 5x · Carga rápida 22W · 2x USB-C + USB-A · Leve e compacto · Ideal pra usar o dia todo</p>
+        <div class="prow">
+          <div class="pprices">
+            <span class="pold">R$ 99,90</span>
+            <span class="pnew"><span>R$</span> 69,90</span>
+            <span class="psave">💚 Economize R$ 30,00</span>
+          </div>
+          <a class="pbuy" href="https://wa.me/5581996130184?text=Oi!%20Quero%20o%20Power%20Bank%2020.000mAh%20por%20R%24%2069%2C90%20%E2%9A%A1" target="_blank" rel="noopener">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Pedir
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="pbanner reveal">
+  <span class="pb-icon">🎁</span>
+  <div class="pb-text">
+    <h3>Frete grátis pra SLM!</h3>
+    <p>Em compras acima de <strong>R$ 80,00</strong> a entrega é por nossa conta. Aproveite e economize ainda mais!</p>
+  </div>
+</div>
+
+<section class="stats reveal">
+  <div class="stats-inner">
+    <div class="sc"><div class="sc-num">200+</div><div class="sc-lbl">Clientes atendidos em SLM</div></div>
+    <div class="sc"><div class="sc-num">4.9★</div><div class="sc-lbl">Avaliação média</div></div>
+    <div class="sc"><div class="sc-num">1 dia</div><div class="sc-lbl">Prazo médio de entrega</div></div>
+  </div>
+</section>
+
+<section class="community reveal">
+  <div class="comm-card">
+    <div class="comm-stars">★★★★★</div>
+    <h2 class="comm-title">Apoie quem é da sua comunidade 🏘️</h2>
+    <p class="comm-text">Comprando na Vizzu SLM, você apoia uma loja local de São Lourenço da Mata — atendimento humano, entrega rápida e produto de qualidade. Sem enrolação.</p>
+    <a class="comm-btn" href="https://wa.me/5581996130184?text=Oi!%20Vi%20o%20site%20da%20Vizzu%20SLM%20e%20quero%20saber%20mais!%20%F0%9F%9B%8D%EF%B8%8F" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar com a gente
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">
+    <div class="fmark">VZ</div>
+    <span class="fbrand">VIZZU SLM</span>
+  </div>
+  <div class="socials">
+    <a class="sb" href="https://wa.me/5581996130184" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <a class="sb" href="#" aria-label="Instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="url(#igG2)">
+        <defs><linearGradient id="igG2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#dc2743"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+    <a class="sb" href="#" aria-label="Facebook">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+  </div>
+  <p class="finfo">📍 São Lourenço da Mata – PE &nbsp;·&nbsp; 📞 (81) 99613-0184<br>🚚 Entrega rápida · 🛡️ Só paga ao receber</p>
+  <p class="fcopy">© 2025 VIZZU SLM · Todos os direitos reservados</p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*65+'ms';obs.observe(el);});
+</script>
+</body>
+</html>
+HTMLEOF
+echo "Done - $(wc -c < /mnt/user-data/outputs/vizzu-slm.html) bytes"
+Saída
+
+Done - 55503 bytes
+Concluído
+
+
+
+
+
+
